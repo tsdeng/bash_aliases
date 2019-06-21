@@ -7,19 +7,25 @@ export EDITOR="emacs -nw"
 alias e='emacs -nw'
 
 # Colorful terminal
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# Better ls
-# -G enable colorized output
-# -F add readable suffix / for dir, * for executable, @ for link, etc.
-# -h human readable size unit.
-alias ls='ls -GFh'
-alias ll='ls -GFlah'
 
-# grep with color
-alias grep='grep --color=auto'
+# only needed for OSX.
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Better ls
+    # -G enable colorized output
+    # -F add readable suffix / for dir, * for executable, @ for link, etc.
+    # -h human readable size unit.
+    alias ls='ls -GFh'
+    alias ll='ls -GFlah'
+    # grep with color
+    alias grep='grep --color=auto'
+    # colorful prompt
+    export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+fi
+
+
 
 # ssh with color
 alias ssh='TERM=xterm-256color ssh'
