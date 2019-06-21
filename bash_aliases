@@ -6,13 +6,14 @@
 export EDITOR="emacs -nw"
 alias e='emacs -nw'
 
-# Colorful terminal
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+
 
 
 # only needed for OSX.
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Colorful terminal
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
     # Better ls
     # -G enable colorized output
     # -F add readable suffix / for dir, * for executable, @ for link, etc.
@@ -29,9 +30,6 @@ fi
 
 # ssh with color
 alias ssh='TERM=xterm-256color ssh'
-
-# go_earth
-alias go_earth='ssh -t tsdeng@dengtianshuo.com -p 2323'
 
 # git shortcuts
 alias gst='git status'
