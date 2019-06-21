@@ -27,13 +27,6 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # In linux, the recommendation is to put setting in ~/.bashrc(read for
     # non-login shells) and then let ~/.bash_profile(for login shells)
     # source ~/.bashrc.
-    echo "Your system is linux-gnu, updating ~/.bashrc to source ~/.bash_aliases."
-    insert_to_file 'source ~/.bash_aliases' ~/.bashrc
-fi
+    echo "Your system is linux-gnu, the .bashrc file should source ~/.bash_aliases automatically."
 
-
-
-if [[ "$OSTYPE" == "d"* ]]; then
-    echo "Your system is OSX, updating ~/.bash_profile to source ~/.bash_aliases"
-    insert_to_file 'source ~/.bash_aliases' ~/.bash_profile
 fi
