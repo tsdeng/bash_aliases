@@ -42,3 +42,6 @@ alias gps='git push'
 alias gpl='git pull'
 alias gmg='git merge'
 alias gdf='git diff'
+
+# microk8s shortcuts
+alias kubectl='microk8s kubectl'
