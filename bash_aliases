@@ -20,7 +20,6 @@ alias gps='git push'
 alias gpl='git pull'
 alias gmg='git merge'
 alias gdf='git diff'
-alias go_earth='ssh -t tsdeng@dengtianshuo.com -p 8688'
 
 # rsync_deploy tianshuo@imac.local
 function rsync_deploy {
@@ -57,3 +56,7 @@ EOF
     git --work-tree=$tmp_dir checkout HEAD -- .
     rsync -aP  --delete $tmp_dir/ $user_remote:~/deploy_root/$project_name
 }
+
+# microk8s shortcuts
+alias kubectl='microk8s kubectl'
+alias go_earth='ssh -t tsdeng@dengtianshuo.com -p 2323'
