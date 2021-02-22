@@ -9,6 +9,7 @@ alias e='emacs -nw'
 # ssh with color
 alias ssh='TERM=xterm-256color ssh'
 
+alias ll='ls -lah'
 # git shortcuts
 alias gst='git status'
 alias gco='git checkout'
@@ -55,6 +56,7 @@ EOF
     mkdir -p $tmp_dir
     git --work-tree=$tmp_dir checkout HEAD -- .
     rsync -aP  --delete $tmp_dir/ $user_remote:~/deploy_root/$project_name
+    rm -rf $tmp_dir
 }
 
 # microk8s shortcuts

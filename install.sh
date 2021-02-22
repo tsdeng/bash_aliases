@@ -1,3 +1,4 @@
+
 if [ -f ~/.bash_aliases ]; then
     echo "~/.bash_aliases already exists, will do nothing."
     exit
@@ -29,4 +30,9 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # source ~/.bashrc.
     echo "Your system is linux-gnu, the .bashrc file should source ~/.bash_aliases automatically."
 
+fi
+
+if [[ -f ~/.zshrc ]]; then
+    echo "Updating ~/.zshrc to source ~/.bash_aliases."
+    insert_to_file 'source ~/.bash_aliases' ~/.zshrc
 fi
