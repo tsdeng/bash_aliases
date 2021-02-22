@@ -42,6 +42,7 @@ function rsync_deploy {
 
     echo "Deploying $project_dir..."
     oldd=`pwd`
+    cd $project_dir
 
     # Create ~/deploy_root if not exists.
     ssh "tianshuo@imac.local" bash <<'EOF'
